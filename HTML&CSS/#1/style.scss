@@ -1,0 +1,32 @@
+@import '../colors.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+.info {
+    padding-bottom: 250px;
+}
+
+.up-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: $gray;
+    transform: translateY(0);
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-10px);
+        background-color: $fuchsia;
+        transition: transform 0.3s linear, color 0.3s linear;
+    }
+
+    &__icon{
+        width: 20px;
+        height: 20px;
+    }
+}

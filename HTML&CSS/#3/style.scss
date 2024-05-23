@@ -1,0 +1,111 @@
+@import '../colors.scss';
+
+body {
+    margin: 0;
+}
+
+.cards {
+    padding: 20px;
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        width: max-content;
+        gap: 20px;
+
+        @media(max-width: 1120px) {
+            width: 100%;
+        }
+
+        &_flex {
+            display: flex;
+            flex-wrap: wrap;
+
+            
+        }
+
+        &_grid {
+            display: grid;
+            grid-template-columns: repeat(5, 200px);
+
+            @media(max-width: 1120px) {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            @media(max-width: 900px) {
+                grid-template-columns: repeat(6, 1fr);
+            }
+
+            @media(max-width: 680px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media(max-width: 475px) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+.card {
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: $light-gray;
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 14px;
+    }
+
+    &_flex {
+        @media(max-width: 1120px) {
+            flex: 1 1 200px;
+        }
+        
+    }
+
+    &_grid {
+        @media(max-width: 1120px) {
+            width: 100%;
+            &:nth-child(5n){
+                grid-column: span 4;
+            }
+        }
+
+        @media(max-width: 900px) {
+            &:nth-child(1n), &:nth-child(2n)б  &:nth-child(3n) {
+                grid-column: span 2;
+            }
+            &:nth-child(4n), &:nth-child(5n){
+                grid-column: span 3;
+                grid-row: 2;
+            }
+
+        }
+
+        @media(max-width: 680px) {
+            &:not(:nth-child(5n)) {
+                grid-column: span 1;
+            }
+            &:nth-child(5n){
+                grid-column: span 2;
+                grid-row: 3;
+            }
+        }
+
+        @media(max-width: 475px) {
+            &:nth-child(n){
+                grid-column: auto;
+                grid-row: auto;
+            }
+        }
+        
+    }
+}

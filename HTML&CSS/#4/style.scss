@@ -1,0 +1,67 @@
+@import '../colors.scss';
+
+.about {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-top: 30px;
+    text-align: center;
+
+    &__title {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 28px;
+        letter-spacing: .5em;
+    }
+
+    &__underline {
+        margin: 0 auto;
+        width: 50px;
+        border: 1px solid $black;
+    }
+
+    &__text {
+        margin: 0;
+        color: $dark-gray;
+        line-height: 30px;
+    }
+
+    &__params {
+        display: flex;
+        column-gap: 40px;
+    }
+}
+
+.param {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+
+    &__icon-container {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid $gray;
+
+        &::before {
+            content: "";
+            border-bottom: 1px solid $gray;
+        }
+    }
+
+    &__title {
+       text-transform: uppercase;
+       font-size: 20px;
+       letter-spacing: .3em;
+    }
+
+    &__description {
+        text-align: center;
+    }
+}

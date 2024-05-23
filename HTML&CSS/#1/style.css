@@ -1,0 +1,28 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.info {
+  padding-bottom: 250px;
+}
+
+.up-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+  transform: translateY(0);
+  cursor: pointer;
+}
+.up-button:hover {
+  transform: translateY(-10px);
+  background-color: #ff00ff;
+  transition: transform 0.3s linear, color 0.3s linear;
+}
+.up-button__icon {
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=style.css.map */
