@@ -1,7 +1,3 @@
-const form = document.getElementById("form");
-const fio = document.getElementById("fio");
-const password = document.getElementById("password");
-
 const showError = (input, message) => {
   const formGroup = input.parentElement;
   !formGroup.classList.contains("form__group_error") &&
@@ -65,9 +61,20 @@ const checkPassword = (input) => {
   }
 };
 
-fio.addEventListener("input", function () {
-  checkFio(this);
-});
-password.addEventListener("input", function () {
-  checkPassword(this);
-});
+const validateForm = (form) => {
+  if (!form) return;
+
+  const fio = form.querySelector("#fio");
+  const password = form.querySelector("#password");
+
+  fio.addEventListener("input", function () {
+    checkFio(this);
+  });
+  password.addEventListener("input", function () {
+    checkPassword(this);
+  });
+};
+
+const form = document.getElementById("form");
+
+validateForm(form);
