@@ -1,0 +1,49 @@
+@import "../../HTML&CSS/colors.scss";
+
+body {
+  background-color: $lavender;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+
+  &__title {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid $gray;
+    transition: border-color 0.3s ease-in-out;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-color: $lavender;
+    }
+  }
+}
+
+.form__group_error {
+  color: $red;
+
+  .form__input,
+  form__input:focus {
+    border-color: $red;
+  }
+}
