@@ -1,0 +1,37 @@
+@import "../../HTML&CSS/colors.scss";
+
+.info {
+  padding-bottom: 50px;
+}
+
+.up-button {
+  position: fixed;
+  display: flex;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: $gray;
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 0.2s linear;
+
+  &:hover {
+    transform: translateY(-10px);
+    background-color: $fuchsia;
+    transition: transform 0.3s linear, color 0.3s linear;
+  }
+
+  &_hide {
+    opacity: 0;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

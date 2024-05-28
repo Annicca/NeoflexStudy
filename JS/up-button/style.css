@@ -1,0 +1,32 @@
+.info {
+  padding-bottom: 50px;
+}
+
+.up-button {
+  position: fixed;
+  display: flex;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+.up-button:hover {
+  transform: translateY(-10px);
+  background-color: #ff00ff;
+  transition: transform 0.3s linear, color 0.3s linear;
+}
+.up-button_hide {
+  opacity: 0;
+}
+.up-button__icon {
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=style.css.map */
