@@ -22,7 +22,7 @@ const checkFio = (input) => {
       showError(input, `Поле обязательно`);
       break;
     case !regexp.test(input.value):
-      showError(input, "Use only letters");
+      showError(input, "Поле должно сожержать только буквы");
       break;
     default:
       showSuccess(input);
@@ -66,6 +66,8 @@ const validateForm = (form) => {
 
   const fio = form.querySelector("#fio");
   const password = form.querySelector("#password");
+
+  if (!fio && !password) return;
 
   fio.addEventListener("input", function () {
     checkFio(this);

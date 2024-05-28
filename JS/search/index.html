@@ -5,7 +5,18 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
-    <main></main>
+    <main>
+      <h1 class="title">Filterable list</h1>
+      <form id="filter" class="form">
+        <input
+          type="search"
+          id="search"
+          placeholder="Search..."
+          class="form__search"
+        />
+      </form>
+      <ul class="filter-list" id="js-filter-list"></ul>
+    </main>
   </body>
   <script src="./index.js" async></script>
 </html>
