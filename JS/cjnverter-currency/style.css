@@ -1,0 +1,30 @@
+.currency {
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #e6e6fa;
+}
+.currency__container {
+  display: grid;
+  width: 50%;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 40px;
+}
+@media (max-width: 768px) {
+  .currency__container {
+    width: 100%;
+  }
+}
+@media (max-width: 560px) {
+  .currency__container {
+    grid-auto-flow: row;
+  }
+}
+.currency__item {
+  display: flex;
+  gap: 10px;
+}
+.currency__name {
+  color: #696969;
+  text-transform: uppercase;
+}/*# sourceMappingURL=style.css.map */

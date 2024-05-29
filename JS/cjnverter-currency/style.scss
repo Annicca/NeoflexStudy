@@ -1,0 +1,33 @@
+@import "../../HTML&CSS/colors.scss";
+
+.currency {
+  padding: 40px;
+  border-radius: 10px;
+  background-color: $lavender;
+
+  &__container {
+    display: grid;
+    width: 50%;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 40px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    @media (max-width: 560px) {
+      grid-auto-flow: row;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__name {
+    color: $dark-gray;
+    text-transform: uppercase;
+  }
+}
