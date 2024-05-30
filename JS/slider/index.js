@@ -63,7 +63,7 @@ const createSlide = (slide) => {
 
 const displaySlider = async () => {
   const slides = await getData(
-    "https://jsonplaceholder.typicode.com/photos?_limit=10"
+    "https://jsonplaceholder.typicode.com/photos?_limit=20"
   );
   if (!slides) return;
 
@@ -72,7 +72,8 @@ const displaySlider = async () => {
 
   slider.innerHTML = slides.map(createSlide).join("");
 
-  const step = (slider.scrollWidth / Array.from(slides).length) * 2;
+  // продвижение по одной карточке
+  const step = slider.scrollWidth / Array.from(slides).length;
 
   sliderGo(slider, step);
 };
