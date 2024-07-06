@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<acts>
+  <act>
+    <group>Звоны</group>
+    <name_act>Молодость</name_act>
+    <number_participant>10</number_participant>
+  </act>
+  <act>
+    <group>Колокольчик</group>
+    <name_act>Зимушка</name_act>
+    <number_participant>16</number_participant>
+  </act>
+  <act>
+    <group>Тори</group>
+    <name_act>Дождь</name_act>
+    <number_participant>6</number_participant>
+  </act>
+</acts>
